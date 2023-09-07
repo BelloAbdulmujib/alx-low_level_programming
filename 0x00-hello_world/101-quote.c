@@ -1,12 +1,18 @@
-#include <stdio.h>
 #include <unistd.h>
+
 /**
- * main - My entry point
+ * main - This is my entry point
  *
- * Return: Always 0 (success)
+ * Description: print a quote using write function
+ *	ssize_write(int fd.const void *buf, size_t count);
+ *
+ * Return: 1 (error).
  */
-int main(void)
+
+int  main(void)
 {
-	Write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19"));
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	Write(1, quo, 5);
 	return (1);
 }
