@@ -28,7 +28,7 @@ int main(void)
 		}
 		
 	}
-	puchart('\n');
+	puchar('\n');
 	return (0);
 
 }
