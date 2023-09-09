@@ -8,31 +8,27 @@
 
 int main(void)
 {
-	int i = '0';
-	int j = '0';
+	int n, m;
 
-	while (i <= '9')
+	for (n = 48; n <= 56; n++)
 	{
-		while (j <= '9')
+		for (m = 49; m <= 57; m++)
 		{
-			if (!(i > j) || i == j)
+			if (m > n)
 			{
-				putchar(i);
-				putchar(j);
-				if (i == '8' && j == '9')
-				{
-					putchar('\n');
-				}
-				else
+				putchar(n);
+				putchar(m);
+				if (n != 56 || m != 57)		
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			j++;
+			
 		}
-		j = '0';
-		i++;
+		
 	}
-return (0);
+	puchart('\n');
+	return (0);
+
 }
