@@ -6,7 +6,7 @@
  * Return: always 0
  */
 
-void _puts_recursion(char *s);
+void _puts_recursion(char *s)
 {
 	int s = 0;
 
