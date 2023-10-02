@@ -3,10 +3,9 @@
 
 int main(int argc, char *argv[])
 {
-	int i:
-	for (i = 0; i < argc; i++)
-	{
-		_putchar("%s ", argv[i]);
-	}
-	_putchar("\n");
+	(void) argc;
+
+	printf("%s\n", argv[0]);
+
+	return 0;
 }
