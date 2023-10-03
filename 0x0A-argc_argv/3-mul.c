@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * main - program that multiply two numbers
  * @argc: numbers of argument
@@ -7,7 +7,7 @@
  * Return: 0 always
  */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[1])
 {
 	int num1, num2, mul;
 
