@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * str_concat - get ends for input and add together for size
  * @s1: input one to concat
