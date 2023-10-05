@@ -1,9 +1,13 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 
 /**
  * free_grid - free 2 dimentional arrays
  * @grid: 2 dimentional grid
  * @height: the dimention of grid height
+ *
  * Return: nothig
  */
 
