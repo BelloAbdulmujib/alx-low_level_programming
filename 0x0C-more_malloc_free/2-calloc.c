@@ -2,12 +2,13 @@
 
 /**
  * _calloc - allocates memory for an array, using malloc
- * @nmemb: memory to be allocated
- * @size: number of bytes to allocate
+ * @b: character to copy
+ * @s: memory area to be filled
+ * @n: number of copy times
  * Return: pointer to memory area
  */
 
-void *_calloc(unsigned int nmemb, unsigned int size)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
