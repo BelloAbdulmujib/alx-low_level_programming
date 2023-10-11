@@ -12,7 +12,7 @@ void print_name(char *name, void (*f)(char *))
 	{
 	return;
 
-	_putchar("%S/n");
+	f(name);
 	}
 }
 
