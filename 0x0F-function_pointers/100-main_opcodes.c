@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - a program that prints its own opcodes
@@ -15,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		_putchar("Error\n");
+		printf("Error\n");
 		exit(1);
 	}
 
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (bytes < 0)
 	{
-		_putchar("Error\n");
+		printf("Error\n");
 		exit(2);
 	}
 
@@ -33,10 +34,10 @@ int main(int argc, char *argv[])
 	{
 		if (j == bytes - 1)
 		{
-			_putchar("%02hhx\n", arr[j]);
+			printf("%02hhx\n", arr[j]);
 			break;
 		}
-		_putchar("%02hhx ", arr[j]);
+		printf("%02hhx ", arr[j]);
 	}
 	return (0);
 }
