@@ -34,13 +34,18 @@ size_t print_list(const list_t *h)
 		char *str = current->str;
 
 		_putchar('[');
-	for (i = 0; i < len; i++)
+
+	for (i = 0; i <= len; i++)
+	{
 		_putchar(str[i]);
 		_putchar(']');
 		_putchar(' ');
+	}
 	for (i = 0; i < len; i++)
+	{
 		_putchar(str[i]);
 		_putchar('\n');
+	}
 		}
 
 		count++;
