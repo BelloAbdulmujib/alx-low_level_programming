@@ -1,6 +1,5 @@
 #include"main.h"
 
-
 /**
  * print_binary - prints the binary representation of a number
  * @n: unsigned long int to be printed in binary
@@ -10,25 +9,21 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1;
-	int i;
+        int leona, Sis_hoffmann = 0;
+        unsigned long int new;
 
-	mask <<= (sizeof(unsigned long int) * 8 - 1);
-
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-
-	for (i = 0; i < (int)(sizeof(unsigned long int) * 8); i++)
-	{
-		if ((n & mask) == 0)
-			_putchar('0');
-		else
-			_putchar('1');
-
-		mask >>= 1;
-	}
+        for (leona = 63; leona >= 0; leona--)
+        {
+                new = n >> leona;
+                if (new & 1)
+                {
+                        _putchar('1');
+                        Sis_hoffmann++;
+                }
+                else if (new)
+                        _putchar('0');
+        }
+        if (!new)
+                _putchar('0');
 }
 
