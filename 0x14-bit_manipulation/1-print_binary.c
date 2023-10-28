@@ -1,33 +1,35 @@
 #include"main.h"
+#include <stdio.h>
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: unsigned long int to be printed in binary
- *
- * Return: void
+ * print_binary - Prints the binary representation of a number.
+ * @n: The number to be converted and printed.
  */
 
 void print_binary(unsigned long int n)
-
 {
-	unsigned long int divisor, check;
-	char flag;
+	int shift, flag = 0;
+	unsigned long int mask = 1UL << (sizeof(n) * 8 - 1);
 
-	flag = 0;
-	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
-	while (divisor != 0)
+	if (n == 0)
 	{
-		check = n & divisor;
-		if (check == divisor)
-		{
-			flag = 1;
-			_putchar('1');
-		}
-		else if (flag == 1 || divisor == 1)
-		{
-			_putchar('0');
-		}
-		divisor >>= 1;
+		putchar('0');
+		return;
+	}
+
+	for (shift = 0; shift < (sizeof(n) * 8); shift++)
+	{
+	if ((n & mask) >> (sizeof(n) * 8 - 1))
+	{
+		flag = 1;
+	}
+
+	if (flag)
+	{
+		putchar('0' + ((n & mask) >> (sizeof(n) * 8 - 1)));
+	}
+
+	n <<= 1;
 	}
 }
 
