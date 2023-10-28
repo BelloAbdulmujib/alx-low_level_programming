@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (i = 0; i < (int)(sizeof(unsigned long int) * 8); i++)
+	for (i = 0; i <= (int)(sizeof(unsigned long int) * 8); i++)
 	{
 		if ((n & mask) == 0)
 			_putchar('0');
