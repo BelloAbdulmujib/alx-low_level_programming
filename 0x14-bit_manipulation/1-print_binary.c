@@ -1,4 +1,4 @@
-#include "main.h"
+#include"main.h"
 
 /**
  * print_binary - prints the binary representation of a number
@@ -6,27 +6,28 @@
  *
  * Return: void
  */
+
 void print_binary(unsigned long int n)
+
 {
-	unsigned long int mask = 1;
-	int i;
+	unsigned long int divisor, check;
+	char flag;
 
-	mask <<= (sizeof(unsigned long int) * 8 - 1);
-
-	if (n == 0)
+	flag = 0;
+	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (divisor != 0)
 	{
-		_putchar('0');
-		return;
-	}
-
-	for (i = 0; i <= (int)(sizeof(unsigned long int) * 8); i++)
-	{
-		if ((n & mask) == 0)
-			_putchar('0');
-		else
+		check = n & divisor;
+		if (check == divisor)
+		{
+			flag = 1;
 			_putchar('1');
-
-		mask >>= 1;
+		}
+		else if (flag == 1 || divisor == 1)
+		{
+			_putchar('0');
+		}
+		divisor >>= 1;
 	}
 }
 
